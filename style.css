@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    flex-flow: column nowrap;
+    background-color: hsl(221, 49%, 30%);
+    font-family: 'Inter', sans-serif;
+}
+.card{
+    border: 0.5rem solid rgb(126, 81, 126);
+
+    border-radius: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    padding: 4rem 3.5rem;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    animation-name: cardFlip;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: relative;
+    left: -120rem;
+    transition: all 0.5s  ease;
+}
+h1{
+    font-size: 6rem;
+    color: white;
+    font-weight: 900;
+    transition: all 0.5s  ease;
+    position: relative;
+   
+}
+h1::after{
+    content: '';
+    width: 12rem;
+    height: 0.5rem;
+    position:absolute;
+    left: 0;
+    top: 100%;
+    background-color: rgb(126, 81, 126); 
+    border-radius: 999px;  
+}
+h3{
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+    transition: all 0.5s  ease;
+
+}
+p{
+    font-size: 1.5rem;
+    color: rgb(236, 228, 238);
+    font-weight: 700;
+    transition: all 0.5s  ease;
+
+}
+button{
+    border: none;
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+    border-radius: 1rem;
+    font-weight: 900;
+    font-size: 2rem;
+    color: white;
+    background-color:rgb(126, 81, 126);
+    transition: all 0.5s  ease;
+    animation-name: cardFlip;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+}
+button:hover{
+    background-color:rgb(109, 46, 109);
+}
+
+@keyframes cardFlip {
+    0%{
+        transform:rotateZ(270deg);
+    }
+    100%{
+        transform:rotateZ(0deg);
+        left: 0;
+
+    }
+}
