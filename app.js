@@ -6,7 +6,7 @@ const btn = document.querySelector("#btn");
 const card = document.querySelector(".card");
 
 btn.addEventListener("click", () => {
-    fetch("http://localhost:3002/profile").then(response =>response.json()).then(data => {
+    fetch("/serverJson.json").then(response =>response.json()).then(data => {
         showProfile(data)
      })
 })
